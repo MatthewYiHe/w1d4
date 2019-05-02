@@ -1,5 +1,7 @@
-arr = ['apple', 'pear', 'banana']
+var array1 = [1, 4, 9, 16];
 
-for (var i in arr){
-  console.log(i)
-}
+// pass a function to map
+const map1 = array1.map(x => x * 2);
+
+console.log(map1);
+// expected output: Array [2, 8, 18, 32]
