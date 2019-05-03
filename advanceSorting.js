@@ -13,13 +13,13 @@ console.log(students.sort(compare));
     if (a.name > b.name){
       return 1;
     } else if (a.name < b.name){
-      return -1
+      return -1;
     } else {
       if (a.age > b.age){
         return -1;
       } else if (a.age === b.age){
         return 0;
-      } return 1
+      } return 1;
     }
   }
 
