@@ -1,17 +1,18 @@
-var array = [5, 2, 1, 3, 10];
+function makeIdGenerator() {
+  var id = 0;
 
+  // The following is the closure function
+  return function() {
+    // This inner function accesses and assigns the value of
+    // the variable id, which was defined in the parent function
+    id += 1;
+    return id;
+  }
+}
 
+// makeIdGenerator returns a function which is assigned to
+// the variable nextId
+var nextId = makeIdGenerator();
 
-  // function compare(a ,b){
-  //   if (a > b)
-
-  //   return 1;
-  //   else if (a === b) {
-  //     return 0;
-  //   }
-  //   return -1;
-
-  // }
-
-  console.log(array.sort())
-// console.log(array)
+console.log(nextId()); // Logs: 1
+console.log(nextId()); // Logs: 2
